@@ -6,6 +6,7 @@ import 'package:sangath/activity/home_activity.dart';
 import 'dart:ui';
 
 import 'package:sangath/activity/login.dart';
+import 'package:sangath/activity/register.dart';
 import 'package:sangath/utils/routes.dart';
 
 void main() {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const Login(),
         MyRouts.homeRoute: (context) => const HomeActivity(),
-        MyRouts.loginRoute: (context) => const Login()
+        MyRouts.loginRoute: (context) => const Login(),
+        MyRouts.ragister: (context) => const Ragister()
       },
     );
   }
