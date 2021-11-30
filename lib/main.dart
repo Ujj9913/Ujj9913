@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sangath/activity/home_activity.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/widgets.dart';
 // ignore: unused_import
 import 'dart:ui';
@@ -18,10 +18,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //initialRoute: "/login",  use to inisal routes
+      theme: ThemeData(
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
+      //initialRoute: "/login",  use to initial routes
       routes: {
-        "/": (context) => const HomeActivity(),
-        "/login": (context) => const login()
+        "/": (context) => const Login(),
+        "/login": (context) => const Login()
       },
     );
   }
