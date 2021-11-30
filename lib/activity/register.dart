@@ -1,16 +1,14 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:sangath/utils/routes.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class Ragister extends StatefulWidget {
+  const Ragister({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  _RagisterState createState() => _RagisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RagisterState extends State<Ragister> {
   String name = "";
   bool changeBtn = false;
   @override
@@ -38,8 +36,8 @@ class _LoginState extends State<Login> {
                 children: [
                   TextFormField(
                     decoration: const InputDecoration(
-                      hintText: "enter name",
-                      labelText: "Username",
+                      hintText: "Enter Full Name",
+                      labelText: "Full Name",
                     ),
                     onChanged: (value) {
                       name = value;
@@ -47,9 +45,18 @@ class _LoginState extends State<Login> {
                     },
                   ),
                   TextFormField(
+                    decoration: const InputDecoration(
+                        hintText: "Enter the Email id",
+                        labelText: "Email Address"),
+                  ),
+                  TextFormField(
+                       
+                       decoration: const InputDecoration(hintText: "Mobile Number",labelText: "Enter the Mobile Number"),
+                  ),
+                  TextFormField(
                     obscureText: true,
                     decoration: const InputDecoration(
-                      hintText: "enter password",
+                      hintText: "Enter Password",
                       labelText: "Password",
                     ),
                   ),
@@ -86,22 +93,14 @@ class _LoginState extends State<Login> {
                             color: Colors.deepPurple,
                             borderRadius:
                                 BorderRadius.circular(changeBtn ? 50 : 8))),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  ElevatedButton(
+                  )
+                  /*ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, MyRouts.ragister);
+                        Navigator.pushNamed(context, MyRouts.homeRoute);
                       },
                       style: TextButton.styleFrom(
-                          backgroundColor: Colors.deepPurple,
-                          minimumSize: const Size(150, 50)),
-                      child: const Text(
-                        "ragister",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ))
+                          minimumSize: const Size(150, 40)),
+                      child: const Text("Login"))*/
                 ],
               ),
             )
